@@ -1,0 +1,87 @@
+def hard(input):
+    for i in range(input):
+        point = True
+        for j in range(i + 1):
+            x = "  " * (input - (i + 1))
+            y = str(j + 1)
+            if point :
+                print(x+y, end=" ")
+                point = False
+            else:
+                print(y, end=" ")
+        print()
+hard(5)
+
+======================================================
+def pattern(level):
+    if level==0:
+        return
+    else:
+        pattern(level - 1)
+        print(level,end=" ")
+def hard(input):
+    if input==0:
+        return
+    else:
+        hard(input-1)
+        pattern(input)
+        print()
+===================================================
+
+def pattern(level):
+    if level==0:
+        return
+    else:
+        pattern(level - 1)
+        print(level,end=" ")
+def hard(input,c=0):
+    if input==0:
+        return
+    else:
+        hard(input-1,c+1)
+        if c!=0:
+            y="   t" * c
+            x=str(pattern(input))
+            print(x+y)
+        else:
+            x = str(pattern(input))
+        print()
+hard(5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class FinalQ:
+    def print(self, array, idx):
+        if (idx < len(array)):
+            profit = self.calcProfit(array[idx])  # TO DO
+
+    def calcProfit(self, investment):
+
+
+
+
+array = [25000, 100000, 250000, 350000]
+f = FinalQ()
+f.print(array, 0)
+
+
+
+# Output:
+# 1. Investment: 25000; Profit: 0.0
+# 2. Investment: 100000; Profit: 3375.0
+# 3. Investment: 250000; Profit: 15375.0
+# 4. Investment: 350000; Profit: 23375.0
