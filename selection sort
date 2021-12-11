@@ -1,0 +1,20 @@
+def array(a, i, j):
+    # if i == len(a):
+    #     return
+    if i < len(a):
+        min = i
+        while j < len(a):
+            if a[j] < a[min]:
+                min = j
+            j += 1
+        # print(a)
+        if min != i:
+            temp = a[i]
+            a[i] = a[min]
+            a[min] = temp
+        array(a, i + 1, i + 2)
+
+
+a = [9, 8, 3, 10, -5]
+array(a, 0, 1)
+print(a)
