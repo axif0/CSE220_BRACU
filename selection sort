@@ -1,13 +1,11 @@
 def array(a, i, j):
-    # if i == len(a):
-    #     return
-    if i < len(a):
+    n=len(a)
+    if i < n-1:
         min = i
-        while j < len(a):
+        if j<n:
             if a[j] < a[min]:
                 min = j
-            j += 1
-        # print(a)
+            array(a,i,j+1)
         if min != i:
             temp = a[i]
             a[i] = a[min]
