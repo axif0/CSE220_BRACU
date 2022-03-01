@@ -1,0 +1,14 @@
+#normal array given--> line 19
+#in circular array there are  a starting point and a circular array size given
+
+def circular_array(method, start, size):
+    i = 0
+    index = start
+    while (i != size):
+        print("value",method[index],"index",index) #print 7
+        index = (index + 1) % (len(array)) # then index encrease > (7+1)=8% len(first array length=8)=8%8==0
+        #index 0
+        i+=1
+
+array = [20,10,0,0,0,10,20,30]  # given array
+circular_array(array, 5, 5) # first 5 pointing at 10>index 5 and second 5 is the size of the circular array
